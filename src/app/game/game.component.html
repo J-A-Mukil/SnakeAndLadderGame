@@ -1,0 +1,29 @@
+<p>game works!</p>
+
+<div class="other">
+    <div class="divR" *ngFor="let data of uiBoard">
+        <ng-container *ngIf="(data.posNum - 1) % 10 === 0">
+            
+        </ng-container>
+        <div class="divR" [ngClass]="data.posB === true?'class1':'()'"
+        [ngClass]="[(data.posA === true &&  data.posB === true)? 'class3' : '', 
+         (data.posA === true &&  data.posB === false) ? 'class1' : '', 
+         (data.posA === false &&  data.posB === true) ? 'class2' : '',
+         (data.isSnakeHead === true) ? 'class4':'',]"
+        >
+            {{ data.posNum }}
+        </div>
+    </div>
+</div>
+
+    <div>
+        
+
+  
+    
+    <div> Current position of A = {{ curPosA + 1}}  Current position of B =  {{curPosB + 1}}</div>
+   
+
+    
+
+</div>
